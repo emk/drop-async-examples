@@ -1,0 +1,11 @@
+[package]
+name = "drop-async"
+version = "0.1.0"
+authors = ["Eric Kidd <git@randomhacks.net>"]
+edition = "2018"
+
+[dependencies]
+failure = "0.1.5"
+# Lock exact versions to work around some nightly Rust breakage.
+tokio = { version = "=0.1.15", features = ["async-await-preview"] }
+tokio-async-await = "=0.1.5"
